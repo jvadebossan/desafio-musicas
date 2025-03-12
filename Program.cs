@@ -1,4 +1,5 @@
-﻿using desafio_musicas.Models;
+﻿using desafio_musicas.Exercicios;
+using desafio_musicas.Models;
 using NPOI.SS.Formula.Functions;
 using NPOI.SS.UserModel;
 
@@ -8,11 +9,19 @@ class Program
 {
 
     static string caminhoArquivo = Path.Combine(Environment.CurrentDirectory, "musicas.xlsx");
-    static List<Musica> musicas = [];
+    public static List<Musica> musicas = [];
 
     public static void Main(string[] args)
     {
         ImportarExcel();
+        Ex1.Exec();
+        //Ex2.Exec();
+        //Ex3.Exec();
+        //Ex4A.Exec();
+        //Ex4B.Exec();
+        //Ex4C.Exec();
+        //Ex5.Exec();
+        //Ex6.Exec();
     }
 
     public static void ImportarExcel()
@@ -41,4 +50,6 @@ class Program
             musicas.Add(musica);
         }
     }
+
+
 }
