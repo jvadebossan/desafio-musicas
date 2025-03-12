@@ -4,6 +4,19 @@ namespace desafio_musicas.Models;
 
 public class Musica
 {
+    public Musica(int codigo, DateTime dataLancamento, string nome, string artista, string album, string genero, double duracao, string gravadora, string pais, string idioma)
+    {
+        Codigo = codigo;
+        DataLancamento = dataLancamento;
+        Nome = nome;
+        Artista = artista;
+        Album = album;
+        Genero = genero;
+        Duracao = duracao;
+        Gravadora = gravadora;
+        Pais = pais;
+        Idioma = idioma;
+    }
 
     public int Codigo { get; protected set; }
     public DateTime DataLancamento { get; protected set; }
@@ -74,7 +87,7 @@ public class Musica
 
     public void SetCodigo(int codigo)
     {
-        if (codigo <= 0 )
+        if (codigo <= 0)
             throw new Exception("O codigo deve ser maior que 0.");
         Codigo = codigo;
     }
